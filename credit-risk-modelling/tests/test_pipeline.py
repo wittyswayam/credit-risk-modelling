@@ -1,4 +1,3 @@
-"""Sanity tests for the credit-risk pipeline. Run from the repo root: pytest -q"""
 import sys
 from pathlib import Path
 import numpy as np
