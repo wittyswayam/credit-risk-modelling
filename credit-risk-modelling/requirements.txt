@@ -1,0 +1,14 @@
+pandas>=3.0
+numpy>=2.0
+scikit-learn>=1.9
+statsmodels>=0.14
+scipy>=1.11
+matplotlib>=3.8
+seaborn>=0.13
+xlrd>=2.0.1
+python-calamine
+jupyter
+nbconvert
+ipykernel
+joblib
+pytest
