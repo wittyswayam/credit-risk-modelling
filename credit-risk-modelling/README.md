@@ -152,16 +152,10 @@ or open the notebooks in Jupyter and run them top to bottom. All randomness uses
 - **No LGD or EAD.** ECL results are hypothetical sensitivities.
 - **Fairness.** SEX is excluded, but marital status, education and age remain and may proxy protected characteristics; no fairness audit was performed.
 - **Data coding.** Undocumented codes were merged or interpreted, not verified with the data owner.
-- **Statistical caveats.** Model differences among the unweighted variants are small and untested formally; p-values are uncorrected for multiple testing; the validation set was used for feature-set, model and calibration decisions, so the test set is the only unbiased estimate.
-- **Feature design.** Average utilisation has a U-shaped relationship with default, so the linear term is a compromise.
-- **Exploratory analysis used the full dataset.** EDA, including default rates by age, limit and category, was run on all 30,000 rows, including those later used for validation and test. It informed design choices (merging undocumented category codes, the age² term, signed-log transform, the utilisation cap and the age centre of 35). No model parameters were fitted on it, but the test set was not unseen by the analyst, which makes the test result slightly optimistic in principle.
 - **Provenance.** The dataset checksum was not compared with an independently published UCI value.
 
 ## 15. Possible future improvements
 - Weight-of-evidence binning and scorecard scaling, including banded utilisation.
 - Time-aware validation on data with a proper date structure, plus population stability monitoring.
-- Bootstrap confidence intervals for test metrics and formal tests of model differences.
-- Test the recalibrated class-weighted model as the PD model.
-- A fairness audit of the variables that remain.
 - Real LGD and EAD data (or published benchmark parameters), a 12-month PD target and IFRS 9 staging.
 - A gradient-boosting benchmark kept separate from the main logistic study, to quantify what the interpretable model gives up.
